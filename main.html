@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메인 화면</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+  <div class="main-container">
+    <!-- 상단 헤더 -->
+    <header>
+      <div class="logo">Cafe</div>
+      <div class="menu">☰</div>
+    </header>
+
+    <!-- 게시글 영역 -->
+    <main>
+      <div class="post-header">
+        <h2>[개인 프로젝트] 피싱사이트 만들어보기</h2>
+        <div class="post-info">
+          <div class="author-date">
+            <span class="author">이준호</span>
+            <span class="date">2025.09.25.  23:35  조회:21</span>
+          </div>
+          <button class="subscribe">+ 구독</button>
+        </div>
+      </div>
+
+      <div class="post-image">
+        <img src="{{ url_for('static', filename='images/warning.jpg') }}" alt="게시글 이미지">
+      </div>
+
+      <div class="post-content">
+        <p>피싱사이트 만들어보기</p>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

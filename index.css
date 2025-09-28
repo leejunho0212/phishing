@@ -1,0 +1,148 @@
+/* ===== 전체 화면 설정 ===== */
+body {
+  margin: 0;
+  font-family: "Apple SD Gothic Neo", sans-serif;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5vh;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* ===== 로그인 화면 ===== */
+.login-box {
+  width: 90%;
+  max-width: 400px;
+  padding: 0 5%;
+  text-align: center;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* NAVER 글자 (아이폰 11 Pro 기준 유지) */
+.login-box h1 {
+  font-size: 60px; /* 아이폰 11 Pro px 기준 */
+  font-weight: 1000;
+  margin-bottom: 20px;
+  color: #03c75a;
+  text-align: center;
+  text-shadow: 1.3px 0 #03c75a, -1.3px 0 #03c75a;
+}
+
+/* 입력창 & 버튼 기본 스타일 */
+.login-box input,
+.login-box button,
+.login-box .naver-auto-btn,
+.login-box .passKey-login-btn {
+  width: 95%;
+  max-width: 340px;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.login-box input {
+  border: 1px solid #ccc;
+}
+
+.login-box button {
+  background-color: #999;
+  color: #fff;
+  border: none;
+}
+
+.login-box button:hover {
+  background-color: #888;
+}
+
+/* NAVER 자동 로그인 버튼 */
+.login-box .naver-auto-btn {
+  background-color: #02a14a;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.login-box .naver-auto-btn:hover {
+  background-color: #029a46;
+}
+
+/* 패스키 로그인 버튼 */
+.login-box .passKey-login-btn {
+  background-color: white;
+  color: #02a14a;
+  border: 1px solid #02a14a;
+  font-weight: bold;
+}
+
+/* divider */
+.divider {
+  text-align: center;
+  color: #aaa;
+  margin: 20px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* error 메시지 */
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* 로그인 링크 */
+.login-links {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-links a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+.login-links a:last-child {
+  color: #03c75a;
+}
+
+/* ===== 반응형 (안드로이드 및 기타 기종) ===== */
+@media (max-width: 768px) {
+  /* NAVER 글자 비율 조정 */
+  .login-box h1 {
+    font-size: 10vw; /* 화면 너비 비율 기준 */
+    margin-bottom: 4vw;
+  }
+
+  /* divider 글자 크기 비율 조정 */
+  .divider {
+    font-size: 3vw;
+    margin: 4vw 0;
+  }
+
+  /* 입력창 및 버튼 비율 조정 */
+  .login-box input,
+  .login-box button,
+  .login-box .naver-auto-btn,
+  .login-box .passKey-login-btn {
+    font-size: 4.5vw;
+    padding: 3vw;
+    margin: 2vw 0;
+  }
+
+  /* 로그인 링크 글자 크기 */
+  .login-links {
+    font-size: 3.5vw;
+  }
+}

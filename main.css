@@ -1,0 +1,111 @@
+/* ===== 상단 헤더 ===== */
+header {
+    background-color: #0D47A1; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+header .menu {
+    font-size: 32px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ===== 게시글 영역 ===== */
+main {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.post-header h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.post-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.post-info .author-date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 작성자와 날짜 세로 배치 */
+}
+
+.post-info .author {
+    font-weight: bold;
+    color: #000;
+    line-height: 1;
+}
+
+.post-info .date {
+    color: #666;
+    font-size: 14px;
+    margin-top: 2px;
+    line-height: 1.2;
+}
+
+.post-info .subscribe {
+    padding: 2px 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* 게시글 이미지 */
+.post-image img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* 게시글 내용 */
+.post-content p {
+    font-size: 16px;
+}
+
+/* ===== 모바일 반응형 ===== */
+@media(max-width:480px) {
+    main {
+        padding: 20px 10px 10px 10px; /* 상단 패딩 조금만 */
+    }
+
+    /* 사진 + 내용 영역만 아래로 밀기 */
+    .post-image,
+    .post-content {
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .post-image {
+        margin-top: 100px;  /* 위쪽 공간 확보, 숫자 조절 가능 */
+    }
+
+    .post-image img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .post-content {
+        margin-top: 10px;  /* 이미지와 글 사이 간격 */
+        font-size: 14px;
+    }
+}
